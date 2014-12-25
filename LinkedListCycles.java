@@ -18,18 +18,18 @@ public class Solution {
     public boolean hasCycle(ListNode head) {
         
         if (head == null)      return false;
-        if (head.next == null) return false;
-
         ListNode p1 = head,
                  p2 = head;
         
         do {
             p1 = p1.next;
             p2 = p2.next;
+
             if (p2 == null)
                 return false;
 
             p2 = p2.next;
+
             if (p1 == null || p2 == null) {
                 return false;
             }
